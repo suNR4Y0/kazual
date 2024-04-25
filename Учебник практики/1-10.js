@@ -40,4 +40,33 @@ console.log(`Площадь прямоугольника: ${area}`);
 console.log(`Периметр прямоугольника: ${perimeter}`);
 ///////////////////////1.3
 
+function calculateCircleProperties(radius) {
+    let area = Math.PI * radius * radius;
+    let circumference = 2 * Math.PI * radius;
+  
+    return { area, circumference };
+  }
+  
+  let radius = 5;
+  let properties = calculateCircleProperties(4);
+  console.log("Площадь круга: " + properties.area);
+  console.log("Длина окружности: " + properties.circumference);
+
+Debug console:
+Площадь круга: 50.26548245743669
+Длина окружности: 25.132741228718345
+
 /////////////////////////1.4
+
+function calculateTriangleArea(a, b, c) {
+    const s = (a + b + c) / 2;
+    const area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    return area;
+  }
+  
+  const sideA = 3;
+  const sideB = 4;
+  const sideC = 5;
+  const triangleArea = calculateTriangleArea(sideA, sideB, sideC);
+  console.log(triangleArea);
+  Debug console: 6
